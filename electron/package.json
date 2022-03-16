@@ -1,0 +1,131 @@
+{
+	"name": "mdokon_cashbox",
+	"version": "1.3.9",
+	"private": true,
+	"author": "Akhmedov Shokhrukh",
+	"email": "shurikaxmedov1@gmail.com",
+	"description": "mDokon Каssа",
+	"homepage": "./",
+	"main": "./public/electron.js",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/AkhmedovSH/mdokon_cashbox.git"
+	},
+	"build": {
+		"productName": "mDokon",
+		"appId": "com.mdokon_cashbox.app",
+		"files": [
+			"build/electron.js",
+			"build/preload.js",
+			"build/**/*"
+		],
+		"directories": {
+			"buildResources": "./public/**/*"
+		},
+		"extraResources": [
+			"./extraResources/**"
+		],
+		"publish": [
+			{
+				"provider": "github",
+				"owner": "AkhmedovSH",
+				"repo": "your repo name",
+				"private": true,
+				"token": "your token"
+			}
+		],
+		"win": {
+			"artifactName": "${productName}${version}(${arch}).${ext}",
+			"icon": "build/icon.ico",
+			"target": "nsis"
+		},
+		"nsis": {
+			"installerIcon": "build/icon.ico",
+			"installerHeaderIcon": "build/icon.ico",
+			"oneClick": false,
+			"perMachine": true,
+			"allowToChangeInstallationDirectory": true
+		}
+	},
+	"dependencies": {
+		"@electron/remote": "^1.2.0",
+		"@hookform/error-message": "^2.0.0",
+		"@hookform/resolvers": "^2.6.0",
+		"@material-ui/core": "^4.11.4",
+		"@material-ui/icons": "^4.11.2",
+		"@testing-library/jest-dom": "^5.14.1",
+		"@testing-library/react": "^11.2.7",
+		"@testing-library/user-event": "^12.8.3",
+		"apexcharts": "^3.27.2",
+		"axios": "^0.21.1",
+		"bootstrap": "^4.6.0",
+		"cross-env": "^7.0.3",
+		"date-fns": "^2.22.1",
+		"electron-devtools-installer": "^3.2.0",
+		"electron-log": "^4.3.5",
+		"electron-react-devtools": "^0.5.3",
+		"electron-updater": "^4.3.9",
+		"i18next": "^20.3.2",
+		"i18next-browser-languagedetector": "^6.1.2",
+		"lodash": "^4.17.21",
+		"postinstall": "^0.7.0",
+		"react": "^17.0.2",
+		"react-apexcharts": "^1.3.9",
+		"react-barcode": "^1.4.0",
+		"react-bootstrap": "^1.6.1",
+		"react-datepicker": "^4.1.1",
+		"react-debounce-input": "^3.2.3",
+		"react-dom": "^17.0.2",
+		"react-hook-form": "^7.9.0",
+		"react-i18next": "^11.11.0",
+		"react-lottie-player": "^1.3.3",
+		"react-particles-js": "^3.5.3",
+		"react-redux": "^7.2.2",
+		"react-router-dom": "^5.2.0",
+		"react-scripts": "4.0.3",
+		"react-select": "^4.3.1",
+		"react-to-print": "^2.12.6",
+		"react-toastify": "^7.0.3",
+		"redux": "^4.0.5",
+		"sequelize": "^6.6.4",
+		"sqlite": "^4.0.23",
+		"sqlite3": "^5.0.2",
+		"web-vitals": "^1.0.1",
+		"xlsx": "^0.17.2",
+		"yup": "^0.32.9"
+	},
+	"devDependencies": {
+		"concurrently": "^6.2.0",
+		"electron": "15.3.1",
+		"electron-builder": "^22.14.13",
+		"wait-on": "^5.3.0"
+	},
+	"scripts": {
+		"start": "cross-env BROWSER=none react-scripts start",
+		"build": "react-scripts build",
+		"test": "react-scripts test",
+		"dev": "concurrently \"npm start\" \"wait-on http://localhost:3000 && electron .\"",
+		"electron-build": "npm run build && electron-builder build --x64",
+		"deploy": "npm run build && electron-builder --win --publish always",
+		"eject": "react-scripts eject",
+		"postinstall": "electron-builder install-app-deps"
+	},
+	"eslintConfig": {
+		"extends": [
+			"react-app",
+			"react-app/jest"
+		]
+	},
+	"browserslist": {
+		"production": [
+			">0.2%",
+			"not dead",
+			"not op_mini all"
+		],
+		"development": [
+			"last 1 chrome version",
+			"last 1 firefox version",
+			"last 1 safari version"
+		]
+	}
+}
