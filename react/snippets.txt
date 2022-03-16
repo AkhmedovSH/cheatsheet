@@ -1,0 +1,38 @@
+{
+  "Print to console": {
+    "prefix": "log",
+    "body": [
+      "console.log($1);",
+      "$2"
+    ],
+    "description": "Log output to console"
+  },
+  "React if statement in jsx": {
+    "prefix": "rif",
+    "body": [
+      "{$1 &&\n  $2\n}"
+    ],
+    "description": "react jsx if statement"
+  },
+  "React if else statement in jsx": {
+    "prefix": "rifelse",
+    "body": [
+      "{$1 ?\n  $2\n :\n  $3\n}"
+    ],
+    "description": "react jsx if else statement"
+  },
+  "React map in jsx": {
+    "prefix": "rmap",
+    "body": [
+      "{$1.map((item, index) => (\n  $2\n))\n}"
+    ],
+    "description": "react map in jsx"
+  },
+	"ClassName fully": {
+		"prefix": "rclass",
+		"body": [
+			"className=\"$1\"",
+		],
+		"description": "Classname show correcly"
+	}
+}

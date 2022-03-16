@@ -1,0 +1,9 @@
+{
+	"Print": {
+		"prefix": "fprint",
+		"body": [
+			"print('$1${$1}');",
+		],
+		"description": "print"
+	}
+}

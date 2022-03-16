@@ -1,0 +1,28 @@
+1. Auto close tag
+2. Auto Import
+3. Auto Rename Tag
+4. Awesome flutter Snippets
+5. Bracket Pair Colorizer
+6. CSS Formatter
+7. Dart
+8. DotENV
+9. ES7+ React/Redux/React-Native snippets
+10. Flutter
+11. HTML CSS Support
+12. HTML Snipperts
+13. html to JSX
+14. htmltagwrap
+15. i18n Ally
+16. IntelliSense for CSS class names in HTML
+17. javascript console utils
+18. Laravel Blade Spacer
+19. Laravel goto view
+20. Laravel Snippets
+21. Live Sass Compiler
+22. Live Server
+23. IntelliSense for CSS class names in HTML
+24. Vetur
+25. Vue 3 Snippets
+26. React Hooks Snippets
+27. Path Intellisense
+28. PHP IntelliSense
